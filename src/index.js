@@ -1,3 +1,5 @@
-import { modal } from './modules/modal'
+import { modal } from './modules/modal';
+import { timer } from './modules/timer';
 
-modal()
+modal();
+timer('27 march 2022');

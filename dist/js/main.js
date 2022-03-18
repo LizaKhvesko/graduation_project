@@ -16,7 +16,7 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)()\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/timer */ \"./modules/timer.js\");\n\n\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)();\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_1__.timer)('27 march 2022');\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"modal\": () => (/* binding */ modal)\n/* harmony export */ });\nconst modal = () => {\n    const callBtn = document.querySelector('.button');\n    const headerModal = document.querySelector('.header-modal');\n    const overlay = document.querySelector('.overlay');\n    const close = headerModal.querySelector('.header-modal__close');\n\n     function changeDisplay(prop) {\n       headerModal.style.display = prop;\n       overlay.style.display = prop;\n    }\n  \n    callBtn.addEventListener('click', () => {\n        changeDisplay('block')\n    })\n\n   close.addEventListener('click', () => {\n        changeDisplay('none')  \n   })\n}\n\n\n\n//# sourceURL=webpack:///./modules/modal.js?");
+
+/***/ }),
+
+/***/ "./modules/timer.js":
+/*!**************************!*\
+  !*** ./modules/timer.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"timer\": () => (/* binding */ timer)\n/* harmony export */ });\nconst timer = (date) => {\n    const daysSpan = document.querySelectorAll('.count_1 span');\n    const hoursSpan = document.querySelectorAll('.count_2 span');\n    const minutesSpan = document.querySelectorAll('.count_3 span');\n    const secondsSpan = document.querySelectorAll('.count_4 span');\n\n    const getRemaining = () => {\n        let dateStop = new Date(date).getTime();\n        let dateNow = new Date().getTime();\n        let timeRemaining = (dateStop - dateNow) / 1000;\n        let days = Math.floor(timeRemaining / 60 / 60 / 24);\n        let hours = Math.floor((timeRemaining / 60 / 60) %24);\n        let minutes = Math.floor((timeRemaining / 60) % 60);\n        let seconds = Math.floor(timeRemaining % 60);\n\n         if (timeRemaining < 0) {\n            timeRemaining = 0;\n            days = 0;\n            hours = 0;\n            minutes = 0;\n            seconds = 0;\n        }\n        \n        return {timeRemaining, days, hours, minutes, seconds}\n    }\n\n    const updateClock = () => {\n        let getTime = getRemaining();\n        \n        daysSpan.forEach(daySpan => {\n            getTime.days < 10 ? daySpan.textContent = '0' + getTime.days : daySpan.textContent = getTime.days;\n        })\n        hoursSpan.forEach(hourSpan => {\n            getTime.hours < 10 ? hourSpan.textContent = '0' + getTime.hours : hourSpan.textContent = getTime.hours;\n        })\n        minutesSpan.forEach(minuteSpan => {\n            getTime.minutes < 10 ?  minuteSpan.textContent = '0' + getTime.minutes : minuteSpan.textContent = getTime.minutes;\n        })\n        secondsSpan.forEach(secondSpan => {\n            getTime.seconds < 10 ? secondSpan.textContent = '0' + getTime.seconds : secondSpan.textContent = getTime.seconds;\n        })\n    }\n\n    const interval = () => {\n        let intervalId;\n        let getTime = getRemaining();\n        updateClock();\n        if(getTime.timeRemaining > 0) {\n            intervalId = setInterval(updateClock, 1000);\n        } else {\n            clearInterval(intervalId)\n        }\n    }\n    interval();\n}\n\n//# sourceURL=webpack:///./modules/timer.js?");
 
 /***/ })
 
