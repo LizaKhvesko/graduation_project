@@ -16,17 +16,17 @@
   \******************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_one__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/one */ \"./modules/one.js\");\n\n\n(0,_modules_one__WEBPACK_IMPORTED_MODULE_0__.oneJS)()\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/modal */ \"./modules/modal.js\");\n\n\n(0,_modules_modal__WEBPACK_IMPORTED_MODULE_0__.modal)()\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
-/***/ "./modules/one.js":
-/*!************************!*\
-  !*** ./modules/one.js ***!
-  \************************/
+/***/ "./modules/modal.js":
+/*!**************************!*\
+  !*** ./modules/modal.js ***!
+  \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"oneJS\": () => (/* binding */ oneJS)\n/* harmony export */ });\nconst oneJS = () => {\n    const phrase = 'glo'\n    console.log(phrase);\n    console.log('poka');\n}\n\n\n\n//# sourceURL=webpack:///./modules/one.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"modal\": () => (/* binding */ modal)\n/* harmony export */ });\nconst modal = () => {\n    const callBtn = document.querySelector('.button');\n    const headerModal = document.querySelector('.header-modal');\n    const overlay = document.querySelector('.overlay');\n    const close = headerModal.querySelector('.header-modal__close');\n\n     function changeDisplay(prop) {\n       headerModal.style.display = prop;\n       overlay.style.display = prop;\n    }\n  \n    callBtn.addEventListener('click', () => {\n        changeDisplay('block')\n    })\n\n   close.addEventListener('click', () => {\n        changeDisplay('none')  \n   })\n}\n\n\n\n//# sourceURL=webpack:///./modules/modal.js?");
 
 /***/ })
 
