@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"scroll\": () => (/* binding */ scroll)\n/* harmony export */ });\nconst scroll = () => {\n    const arrowImg = document.querySelector('.smooth-scroll img');\n\n    arrowImg.addEventListener('click', () => {\n        window.scrollTo(pageXOffset, 0)\n    })\n\n    window.addEventListener('scroll', function() {\n      arrowImg.hidden = (pageYOffset < document.documentElement.clientHeight);\n    });\n}\n\n//# sourceURL=webpack:///./modules/scroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"scroll\": () => (/* binding */ scroll)\n/* harmony export */ });\nconst scroll = () => {\n    const arrowImg = document.querySelector('.smooth-scroll img');\n    arrowImg.hidden = true;\n\n    arrowImg.addEventListener('click', () => {\n        window.scrollTo(pageXOffset, 0)\n    })\n\n    window.addEventListener('scroll', function() {\n      arrowImg.hidden = (pageYOffset < document.documentElement.clientHeight);\n    });\n}\n\n//# sourceURL=webpack:///./modules/scroll.js?");
 
 /***/ }),
 
