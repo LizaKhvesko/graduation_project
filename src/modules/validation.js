@@ -22,8 +22,10 @@ export const validation = () => {
         })
     })
 
-    calcInput.addEventListener('input', (e) => {
+    if (calcInput) {
+        calcInput.addEventListener('input', (e) => {
             let reg = /[^\d]/g;
             e.target.value =  e.target.value.replace(reg, '');
         })
+    }
 }

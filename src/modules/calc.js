@@ -13,9 +13,12 @@ export const calc = () => {
         }
     }
 
-    calcBlock.addEventListener('change', (e) => {
-        if (e.target === type || e.target === material || e.target === square) {
-            countTotal();
-        }
-    })
+    if (calcBlock) {
+        calcBlock.addEventListener('change', (e) => {
+            if (e.target === type || e.target === material || e.target === square) {
+                countTotal();
+            }
+        })
+    }
+    
 }
