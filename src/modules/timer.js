@@ -24,21 +24,19 @@ export const timer = (date) => {
         return {timeRemaining, days, hours, minutes, seconds}
     }
 
+    const addZero = (time, spans) => {
+         spans.forEach(span => {
+            time < 10 ? span.textContent = '0' + time : span.textContent = time;
+        })
+    }
+
     const updateClock = () => {
         let getTime = getRemaining();
         
-        daysSpan.forEach(daySpan => {
-            getTime.days < 10 ? daySpan.textContent = '0' + getTime.days : daySpan.textContent = getTime.days;
-        })
-        hoursSpan.forEach(hourSpan => {
-            getTime.hours < 10 ? hourSpan.textContent = '0' + getTime.hours : hourSpan.textContent = getTime.hours;
-        })
-        minutesSpan.forEach(minuteSpan => {
-            getTime.minutes < 10 ?  minuteSpan.textContent = '0' + getTime.minutes : minuteSpan.textContent = getTime.minutes;
-        })
-        secondsSpan.forEach(secondSpan => {
-            getTime.seconds < 10 ? secondSpan.textContent = '0' + getTime.seconds : secondSpan.textContent = getTime.seconds;
-        })
+        addZero(getTime.days, daysSpan);
+        addZero(getTime.hours, hoursSpan);
+        addZero(getTime.minutes, minutesSpan);
+        addZero(getTime.seconds, secondsSpan);
     }
 
     const interval = () => {
