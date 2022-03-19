@@ -1,20 +1,19 @@
 export const modal = () => {
-    const callBtn = document.querySelector('.button');
-    const headerModal = document.querySelector('.header-modal');
-    const overlay = document.querySelector('.overlay');
-    const close = headerModal.querySelector('.header-modal__close');
+    const body = document.querySelector('body');
+    const headerModal = body.querySelector('.header-modal');
+    const overlay = body.querySelector('.overlay');
 
-     function changeDisplay(prop) {
+    function changeDisplay(prop) {
        headerModal.style.display = prop;
        overlay.style.display = prop;
     }
-  
-    callBtn.addEventListener('click', () => {
-        changeDisplay('block')
-    })
 
-   close.addEventListener('click', () => {
-        changeDisplay('none')  
+   body.addEventListener('click', (e) => {
+       if(e.target.classList.contains('header-modal__close') || e.target.classList.contains('overlay')) {
+            changeDisplay('none');
+       } else if (e.target.classList.contains('fancyboxModal')) {
+            changeDisplay('block');
+       }
    })
 }
 
