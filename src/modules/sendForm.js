@@ -1,5 +1,12 @@
-export const sendForm = ({classForm, addInfo = []}) => {
-    const forms = document.querySelectorAll(classForm);
+export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
+    let forms;
+    if (classForm !== '') {
+        forms = document.querySelectorAll(classForm)
+    } else {
+        forms = document.getElementsByName(nameForm);
+    }
+    
+    console.log(forms)
     forms.forEach(form => {
         const inputs = Array.from(form.querySelectorAll('input'));
         inputs.forEach(input => input.required = true)
@@ -25,12 +32,14 @@ export const sendForm = ({classForm, addInfo = []}) => {
                 addInfo.forEach(elem => {
                 const element = document.getElementById(elem.id);
                 if (element) {
-                    formBody[elem.id] = element.value;  
+                    if (element.value.length >= 1){
+                        formBody[elem.id] = element.value;  
+                    }
                 }
             })
             
                 sendData(formBody)
-                    .then(() => {
+                    /*.then(() => {
                         inputs.forEach(input => {
                             input.value = ''
                         })
@@ -44,7 +53,7 @@ export const sendForm = ({classForm, addInfo = []}) => {
                                 selects.forEach(select => select.options[0].selected = true)
                             }
                         })
-                    })
+                    })*/
                     .catch(error => console.log(error))
             } else {
                 return
@@ -57,8 +66,6 @@ export const sendForm = ({classForm, addInfo = []}) => {
             }
 
             form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
                 submitForm()
             })
         } catch (error) {
