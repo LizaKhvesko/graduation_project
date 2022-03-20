@@ -39,7 +39,7 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
             })
             
                 sendData(formBody)
-                    /*.then(() => {
+                    .then(() => {
                         inputs.forEach(input => {
                             input.value = ''
                         })
@@ -53,7 +53,7 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
                                 selects.forEach(select => select.options[0].selected = true)
                             }
                         })
-                    })*/
+                    })
                     .catch(error => console.log(error))
             } else {
                 return
