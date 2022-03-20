@@ -25,11 +25,7 @@ export const sendForm = ({classForm, addInfo = []}) => {
                 addInfo.forEach(elem => {
                 const element = document.getElementById(elem.id);
                 if (element) {
-                    if (elem.type === 'block') {
-                    formBody[elem.id] = element.textContent;
-                    } else if (elem.type === 'input'){
                     formBody[elem.id] = element.value;  
-                    }
                 }
             })
             
@@ -37,6 +33,16 @@ export const sendForm = ({classForm, addInfo = []}) => {
                     .then(() => {
                         inputs.forEach(input => {
                             input.value = ''
+                        })
+                        addInfo.forEach(elem => {
+                            const element = document.getElementById(elem.id);
+                            if (element) {
+                                const form = document.getElementById('calc');
+                                const inputs = form.querySelectorAll('input');
+                                const selects = form.querySelectorAll('select');
+                                inputs.forEach(input => input.value = '');
+                                selects.forEach(select => select.options[0].selected = true)
+                            }
                         })
                     })
                     .catch(error => console.log(error))

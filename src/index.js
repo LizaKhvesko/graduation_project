@@ -14,7 +14,6 @@ calc();
 sendForm({
     classForm: '.form-horizontal',
     addInfo: [{
-        type: 'input',
         id: 'calc-total'
     }]
 });

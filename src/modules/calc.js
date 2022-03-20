@@ -7,7 +7,7 @@ export const calc = () => {
 
     function countTotal() {
         if (type.options[0].selected !== true && material.options[0].selected !== true && square.value !== '') {
-            total.value = +square.value * type.options[type.selectedIndex].value * material.options[type.selectedIndex].value
+            total.value = (+square.value * type.options[type.selectedIndex].value * material.options[material.selectedIndex].value).toFixed(1);
         } else {
             total.value = '0';
         }
@@ -20,5 +20,4 @@ export const calc = () => {
             }
         })
     }
-    
 }
