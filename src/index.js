@@ -23,6 +23,10 @@ sendForm({
     classForm: '',
     nameForm: 'callback-form'
 });
+sendForm({
+    classForm: '',
+    nameForm: 'application-form'
+});
 slider();
 photoZoom();
 
