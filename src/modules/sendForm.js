@@ -25,7 +25,9 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
                 const formBody = {};
 
                 formData.forEach((val, key) => {
-                    formBody[key] = val; 
+                    if (val !== '') {
+                        formBody[key] = val; 
+                    }
                 })
                 if(nameForm) {
                    delete formBody.page
