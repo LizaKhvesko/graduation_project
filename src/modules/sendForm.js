@@ -6,7 +6,6 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
         forms = document.getElementsByName(nameForm);
     }
     
-    console.log(forms)
     forms.forEach(form => {
         const inputs = Array.from(form.querySelectorAll('input'));
         inputs.forEach(input => input.required = true)
@@ -28,6 +27,14 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
                 formData.forEach((val, key) => {
                     formBody[key] = val; 
                 })
+                if(nameForm) {
+                   delete formBody.page
+                }
+                if (nameForm === 'callback-form') {
+                   formBody['reason'] = 'call' 
+                } else if (classForm === '.form-horizontal') {
+                    formBody['reason'] = 'discount' 
+                }
 
                 addInfo.forEach(elem => {
                 const element = document.getElementById(elem.id);

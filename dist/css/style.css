@@ -296,7 +296,8 @@ input.error {
   border-radius: 3px;
 }
 #menu li.active a,
-#menu li a:hover {
+#menu li a:hover,
+.mobile-menu li.active a{
   background-color: #008f29;
   color: #fff;
   transition: background-color 0.1s linear, color 0.1s linear;
@@ -1683,10 +1684,12 @@ input.error {
   }
 }
 .menu-mobile{
-  
   position: absolute;
   left: 0;
   width: 500px;
-  display: flex;
   display: none;
 }
+
+
+  
+
