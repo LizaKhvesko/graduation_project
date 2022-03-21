@@ -1273,9 +1273,13 @@ p.services-image_mobile {
     border-width: 0 0 1px;
   }
   .navbar-collapse.collapse {
-    display: none !important;
+    display: none;
     border-top: 1px solid transparent;
   }
+  .navbar-collapse.collapse.burger-open{
+    display: block;
+  }
+
   .navbar-nav {
     float: none !important;
     margin-top: 7.5px;
