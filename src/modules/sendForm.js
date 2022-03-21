@@ -1,9 +1,19 @@
 export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
     let forms;
+    const overlay = document.querySelector('.overlay');
     if (classForm !== '') {
         forms = document.querySelectorAll(classForm)
     } else {
         forms = document.getElementsByName(nameForm);
+    }
+
+    function afterSendData (modal) {
+        const text = modal.querySelector('p.text-center');
+        text.textContent = 'Ваши данные успешно отправлены!'
+        setTimeout(() => {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }, 2000)
     }
     
     forms.forEach(form => {
@@ -65,6 +75,22 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
                             }
                         })
                     })
+                    .then(() => {
+                        if (nameForm === 'callback-form') {
+                            const headerModal = document.querySelector('.header-modal');
+                            afterSendData(headerModal)
+                        } else if (nameForm === 'application-form') {
+                            const serviceModal = document.querySelector('.services-modal');
+                           afterSendData(serviceModal)
+                        } else if (classForm === '.form-horizontal') {
+                            let texts = document.querySelectorAll('.help-block');
+                            texts.forEach(text =>{
+                                text.textContent = 'Ваши данные успешно отправлены!'
+                                setTimeout(() => {
+                                     text.textContent = 'Мы гарантируем 100% онфиденциальность. Ваша информация не будет распространяться.'
+                                }, 2000)
+                        })}
+                    })
                     .catch(error => console.log(error))
             } else {
                 return
@@ -79,7 +105,6 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 submitForm()
-                return false;
             })
         } catch (error) {
             console.log(error.message)

@@ -2,6 +2,8 @@ export const validation = () => {
     const names = document.querySelectorAll('input[name="fio"]');
     const tels = document.querySelectorAll('input[name="phone"]');
     const calcInput = document.getElementById('calc-input');
+
+    console.log(tels)
     
     names.forEach(name => {
         name.addEventListener('input', (e) => {
