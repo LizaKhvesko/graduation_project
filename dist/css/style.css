@@ -1705,7 +1705,9 @@ input.error {
   left: 90%;
   width: 50px;
 }
-
+.noActiveBenefit{
+  display: none;
+}
 
   
 

@@ -31,9 +31,11 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
                    delete formBody.page
                 }
                 if (nameForm === 'callback-form') {
-                   formBody['reason'] = 'call' 
+                   formBody['reason'] = 'call';;
                 } else if (classForm === '.form-horizontal') {
-                    formBody['reason'] = 'discount' 
+                    formBody['reason'] = 'discount';
+                } else if (nameForm === 'application-form') {
+                    formBody['reason'] = 'need a master';
                 }
 
                 addInfo.forEach(elem => {

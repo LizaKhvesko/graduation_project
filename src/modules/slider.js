@@ -1,6 +1,7 @@
 export const slider = () => {
     const services = document.getElementById('services');
     const serviceBlocks = document.querySelectorAll('.service-block');
+
     let width = document.documentElement.clientWidth;
 
     function doSlide (countOfSlides) {

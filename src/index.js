@@ -6,6 +6,7 @@ import { sendForm } from './modules/sendForm';
 import { calc } from './modules/calc';
 import { slider } from './modules/slider';
 import { burger } from './modules/burger';
+import { sliderProfit } from './modules/sliderProfit';
 
 modal();
 timer('27 march 2022');
@@ -29,5 +30,6 @@ sendForm({
 });
 slider();
 burger();
+sliderProfit();
 
 
