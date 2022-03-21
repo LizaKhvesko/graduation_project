@@ -11,8 +11,8 @@ export const modal = () => {
      const sertificates = docs.querySelectorAll('.sertificate-document');
      const documentOverlay = docs.querySelectorAll('.document-overlay');
      
-     buttonCall.setAttribute('href', '#');
-     serviceButtons.forEach(serviceButton =>  serviceButton.setAttribute('href', '#'))
+   /* buttonCall.setAttribute('href', '#');
+     serviceButtons.forEach(serviceButton =>  serviceButton.setAttribute('href', '#'))*/
 
      function changeDisplay(prop, modal) {
        modal.style.display = prop;
@@ -21,12 +21,14 @@ export const modal = () => {
 
     buttonCall.addEventListener('click', () => {
         changeDisplay('block', headerModal) 
+        return false;
     })
 
     services.addEventListener('click', (e) => {
          if (e.target.closest('.service-button')) {
               changeDisplay('block', serviceModal) 
          }
+         return false;
     })
 
     modalBlock.addEventListener('click', (e) => {

@@ -77,6 +77,7 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
             form.addEventListener('submit', (e) => {
                 e.preventDefault();
                 submitForm()
+                return false;
             })
         } catch (error) {
             console.log(error.message)
