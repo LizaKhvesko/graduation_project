@@ -1,11 +1,15 @@
 export const modal = () => {
-     const buttonCall = document.querySelector('.button');
+     const buttonCall = document.querySelector('.button a');
      const headerModal = document.querySelector('.header-modal');
      const overlay = document.querySelector('.overlay');
      const services = document.getElementById('services');
      const serviceModal = document.querySelector('.services-modal');
+     const serviceButtons = document.querySelectorAll('.service-button a');
      const modalBlock = document.querySelector('.modals');
      
+     buttonCall.setAttribute('href', '#');
+     serviceButtons.forEach(serviceButton =>  serviceButton.setAttribute('href', '#'))
+
      function changeDisplay(prop, modal) {
        modal.style.display = prop;
        overlay.style.display = prop;
