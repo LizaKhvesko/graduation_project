@@ -5,7 +5,6 @@ import { validation } from './modules/validation';
 import { sendForm } from './modules/sendForm';
 import { calc } from './modules/calc';
 import { slider } from './modules/slider';
-import { photoZoom } from './modules/photo';
 import { burger } from './modules/burger';
 
 modal();
@@ -29,7 +28,6 @@ sendForm({
     nameForm: 'application-form'
 });
 slider();
-photoZoom();
 burger();
 
 
