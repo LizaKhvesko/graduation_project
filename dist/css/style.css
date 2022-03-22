@@ -420,9 +420,7 @@ input.error {
 }
 
 #offer {
-  background: url("../images/offer2-bg.jpg") no-repeat 50% 50%;
   position: relative;
-  background-size: cover;
 }
 
 #offer:after {
@@ -1813,18 +1811,8 @@ input.error {
   opacity: 1;
 }
 
-.balkony #offer {
-  background: url(../images/offer-bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
-}
-
 .balkony .order {
   background: url(../images/order-bg.jpg) no-repeat center;
-}
-
-.kuhni #offer {
-  background: url(../images/offer3-bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
 }
 
 .kuhni .order {
@@ -1835,19 +1823,12 @@ input.error {
   background: url(../images/order3-2-bg.jpg) no-repeat center;
 }
 
-.dvery #offer {
-  background: url(../images/offer4-bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
-}
 
 .dvery .order {
   background: url(../images/order4-bg.jpg) no-repeat center;
 }
 
-.potolki #offer {
-  background: url(../images/offer5-bg.jpg) no-repeat 50% 50%;
-  background-size: cover;
-}
+
 
 .potolki .order {
   background: url(../images/order5-bg.jpg) no-repeat center;
@@ -2081,3 +2062,19 @@ input.error {
   top: 75%;
   width: 40px;
 }
+.offer-img{
+  display: none;
+  position: absolute;
+  left: 0%;
+  top: -2%;
+  width: 100%;
+  height: auto;
+}
+.offer-img img{
+   max-width: 100%;
+   height: 100%;
+}
+.offer-img-active{
+   display: block;
+}
+

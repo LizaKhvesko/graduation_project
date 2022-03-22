@@ -10,6 +10,7 @@ import { sliderProfit } from './modules/sliderProfit';
 import { getData } from './modules/getData';
 import { createSertificate } from './modules/createSertificate';
 import { gift } from './modules/gift';
+import { autoSlider } from './modules/autoSlider';
 
 getData()
     .then(data => createSertificate(data));
@@ -37,5 +38,6 @@ slider();
 burger();
 sliderProfit();
 gift();
+autoSlider();
 
 
