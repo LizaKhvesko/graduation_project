@@ -3,8 +3,6 @@ export const validation = () => {
     const tels = document.querySelectorAll('input[name="phone"]');
     const calcInput = document.getElementById('calc-input');
 
-    console.log(tels)
-    
     names.forEach(name => {
         name.addEventListener('input', (e) => {
             let reg = /[^a-zа-я]/gi;

@@ -6,6 +6,7 @@ export const modal = () => {
      const serviceModal = document.querySelector('.services-modal');
      const modalBlock = document.querySelector('.modals');
      const bigPhoto = document.querySelector('.big-photo');
+     const wantCall = document.querySelector('.fadeInUp a');
      
      function changeDisplay(prop, modal) {
        modal.style.display = prop;
@@ -32,6 +33,11 @@ export const modal = () => {
          } else if (e.target.classList.contains('services-modal__close')) {
             changeDisplay('none', serviceModal);
        }
+    })
+
+    wantCall.addEventListener('click', (e) => {
+         e.preventDefault();
+      changeDisplay('block', serviceModal)
     })
 }
 
