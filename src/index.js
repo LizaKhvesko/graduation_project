@@ -7,7 +7,11 @@ import { calc } from './modules/calc';
 import { slider } from './modules/slider';
 import { burger } from './modules/burger';
 import { sliderProfit } from './modules/sliderProfit';
+import { getData } from './modules/getData';
+import { createSertificate } from './modules/createSertificate'
 
+getData()
+    .then(data => createSertificate(data));
 modal();
 timer('27 march 2022');
 scroll();
