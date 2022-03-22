@@ -2043,3 +2043,41 @@ input.error {
   height: 700px;
   width: 1320px;
 }
+.gift{
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -50px;
+}
+.gift-img{
+  width: 100px;
+  cursor: pointer;
+}
+.gift-modal{
+  display: none;
+  position: fixed;
+  border: 2px solid green;
+  border-radius: 50%;
+  width: 300px;
+  height: 200px;
+  background-color: green;
+  color: black;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  padding-top: 60px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9999;
+}
+.gift.open,
+.gift-modal-open {
+  display: block;
+}
+.close-photo-gift{
+  cursor: pointer;
+  position: absolute;
+  left: 45%;
+  top: 75%;
+  width: 40px;
+}

@@ -9,6 +9,7 @@ import { burger } from './modules/burger';
 import { sliderProfit } from './modules/sliderProfit';
 import { getData } from './modules/getData';
 import { createSertificate } from './modules/createSertificate';
+import { gift } from './modules/gift';
 
 getData()
     .then(data => createSertificate(data));
@@ -35,5 +36,6 @@ sendForm({
 slider();
 burger();
 sliderProfit();
+gift();
 
 
