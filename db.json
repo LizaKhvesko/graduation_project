@@ -2,18 +2,18 @@
     "sertificates": [
         {
             "id": 0,
-            "small": "../../dist/images/documents/document1.png",
-            "big": "../../dist/images/documents/original/document1.png"
+            "small": "../dist/images/documents/document1.png",
+            "big": "../dist/images/documents/original/document1.png"
         },
         {
             "id": 1,
-            "small": "../../dist/images/documents/document3.png",
-            "big": "../../dist/images/documents/original/document3.png"
+            "small": "../dist/images/documents/document3.png",
+            "big": "../dist/images/documents/original/document3.png"
         },
         {
             "id": 2,
-            "small": "../../dist/images/documents/document4.png",
-            "big": "../../dist/images/documents/original/document4.png"
+            "small": "../dist/images/documents/document4.png",
+            "big": "../dist/images/documents/original/document4.png"
         }
     ]
 }

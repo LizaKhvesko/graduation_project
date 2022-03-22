@@ -8,7 +8,7 @@ import { slider } from './modules/slider';
 import { burger } from './modules/burger';
 import { sliderProfit } from './modules/sliderProfit';
 import { getData } from './modules/getData';
-import { createSertificate } from './modules/createSertificate'
+import { createSertificate } from './modules/createSertificate';
 
 getData()
     .then(data => createSertificate(data));

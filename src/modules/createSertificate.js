@@ -49,20 +49,5 @@ export const createSertificate = (data) => {
             overlay.style.display = 'none'
          })
          })
-        
-         
-
     })
 }
-
-/* docs.addEventListener('click', (e) => {
-         if (e.target.closest('.sertificate-document')) {
-            e.preventDefault();
-            changeDisplay('block', bigPhoto);  
-         } else if(e.target.classList.contains('close-photo')) {
-              changeDisplay('none', bigPhoto);  
-         }
-    })
-
-    })*/
-
