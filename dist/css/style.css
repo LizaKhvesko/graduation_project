@@ -2020,10 +2020,6 @@ input.error {
   height: 280px;
 }
 
-.swiper {
-  height: 700px;
-  width: 1320px;
-}
 .gift{
   display: none;
   position: absolute;
@@ -2063,8 +2059,6 @@ input.error {
   width: 40px;
 }
 .offer-img{
-  display: none;
-  position: absolute;
   left: 0%;
   top: -2%;
   width: 100%;
@@ -2083,5 +2077,14 @@ input.error {
 }
 .benefits__item{
   padding-right: 20px;
+}
+#offer{
+  position: relative;
+}
+#offer .container{
+  position: absolute;
+  top: 0;
+  z-index: 100;
+
 }
 

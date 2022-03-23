@@ -14,6 +14,7 @@
 	<link href="fonts/font.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet">
 	<link href="css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 	<title>Установка пластиковых (ПВХ) окон</title>
 	<meta name="keywords" content="пластиковые, окна, пвх, вставить, века, дом, профиль, поставить, установить, установка, стандартные, цветные, сайт, современные, купить, фирма, цены, дешевые, стоимость, остекление, монтаж">
 	<meta name="description" content="Окна в дом, квартиру или коттедж из пластикового (пвх) или алюминиевого профиля. Стандартные, цветные и с индивидуальным дизайном! Отличные цены и акции!">
@@ -118,17 +119,17 @@
       	</div>
     </nav>
     <div id="offer">
-		<ul class="offer-backgr">
-				<li class="offer-img offer-img-active"><img src="images/offer-bg.jpg"
-																															alt="portfolio"></li>
-				<li class="offer-img"><img src="images/offer2-bg.jpg" alt="portfolio"></li>
-				<li class="offer-img"><img src="images/offer3-bg.jpg" alt="portfolio"></li>
-				<li class="offer-img"><img src="images/offer4-bg.jpg" alt="portfolio"></li>
-				<li class="offer-img"><img src="images/offer5-bg.jpg" alt="portfolio"></li>
-			</ul>
-    	<div class="container">
-
-			
+			<div class="swiper">
+				
+				 <div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/offer-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer2-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer3-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer4-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer5-bg.jpg" alt="portfolio" class="offer-img"></div>
+				</div>
+			</div>	
+			<div class="container">
 			<div class="offer-inner">
     			<div class="offer-heading"><h1><span>Выгодное предложение по</span> <span>монтажу ПВХ-окон в <span class="text-warning">Минске!</span></span></h1></div>
     			<div class="clearfix"></div>
@@ -140,8 +141,9 @@
     				</div>
     			</div>
     		</div>
-
     	</div>
+    	
+		
     </div>
     <div id="benefits" class="section">
     	<div class="container">
@@ -723,6 +725,8 @@
 	<div class="smooth-scroll">
 		<img class="smooth-scroll__img" src="./images/prev_arrow.png" alt="smooth">
 	</div>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="./js/main.js"></script>
+
 </body>
 </html>
