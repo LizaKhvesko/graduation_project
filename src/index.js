@@ -10,9 +10,11 @@ import { sliderProfit } from './modules/sliderProfit';
 import { getData } from './modules/getData';
 import { createSertificate } from './modules/createSertificate';
 import { gift } from './modules/gift';
+import { comments } from './modules/comments';
 
 
-getData()
+
+getData('../db.json')
     .then(data => createSertificate(data));
 modal();
 timer('27 march 2022');
@@ -46,6 +48,12 @@ const swiper = new Swiper('.swiper', {
       delay: 3000,
   }
 });
+
+getData('../comments.json')
+    .then(data => {
+        comments(data)
+    });
+
 
 
 

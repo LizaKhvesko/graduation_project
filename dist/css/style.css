@@ -2100,3 +2100,9 @@ input.error {
   z-index: 100;
 
 }
+.loading{
+  text-align: center;
+}
+.noActive-comment{
+  display: none;
+}
