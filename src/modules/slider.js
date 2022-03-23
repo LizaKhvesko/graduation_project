@@ -25,7 +25,7 @@ export const slider = () => {
                 noActiveSlides(serviceBlocks, currentSlide1, currentSlide2, 'service-block-noActive');
                     currentSlide1 += countOfSlides;
                     currentSlide2 += countOfSlides;
-                if (currentSlide1 >= serviceBlocks.length ||currentSlide2 >= serviceBlocks.length ) {
+                if (currentSlide1 >= serviceBlocks.length || currentSlide2 >= serviceBlocks.length ) {
                     currentSlide1 = countOfSlides - countOfSlides;
                     currentSlide2 = countOfSlides - 1;
                 }

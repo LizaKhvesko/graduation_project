@@ -6,7 +6,7 @@ export const validation = () => {
     names.forEach(name => {
         name.addEventListener('input', (e) => {
             let reg = /[^a-zа-я]/gi;
-            e.target.value =  e.target.value.replace(reg, '');
+            e.target.value = e.target.value.replace(reg, '');
         })
     })
 
@@ -17,7 +17,7 @@ export const validation = () => {
             if (e.target.value.length > 17) {
                tel.style.border = '3px solid red';
             } else {
-                tel.style.border = ''
+                tel.style.border = '';
             }
             e.target.value =e.target.value[0] + e.target.value.slice(1).replace('+', '');
         })

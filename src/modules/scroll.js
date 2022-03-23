@@ -6,7 +6,7 @@ export const scroll = () => {
         window.scrollTo(pageXOffset, 0)
     })
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', () => {
       arrowImg.hidden = (pageYOffset < document.documentElement.clientHeight);
     });
 }

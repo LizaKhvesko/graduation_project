@@ -20,7 +20,7 @@ export const modal = () => {
 
     services.addEventListener('click', (e) => {
          if (e.target.closest('.service-button')) {
-              changeDisplay('block', serviceModal) 
+               changeDisplay('block', serviceModal) 
          }
     })
 
@@ -38,8 +38,8 @@ export const modal = () => {
     })
 
     wantCall.addEventListener('click', (e) => {
-         e.preventDefault();
-      changeDisplay('block', serviceModal)
+          e.preventDefault();
+          changeDisplay('block', serviceModal)
     })
 }
 

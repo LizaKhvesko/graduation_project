@@ -9,12 +9,12 @@ export const sliderProfit = () => {
 
     benefitsArrows.forEach(benefitsArrow => {
         benefitsArrow.addEventListener('click', (e) => {
-        firstGroup.forEach(item => item.classList.toggle('disappear'))
-        secondGroup.forEach(item => item.classList.toggle('disappear'))
-        setTimeout(() => {
-            secondGroup.forEach(item => item.classList.toggle('noActiveBenefit'));
-            firstGroup.forEach(item => item.classList.toggle('noActiveBenefit'));
-        }, 500)
-    })
+            firstGroup.forEach(item => item.classList.toggle('disappear'))
+            secondGroup.forEach(item => item.classList.toggle('disappear'))
+            setTimeout(() => {
+                secondGroup.forEach(item => item.classList.toggle('noActiveBenefit'));
+                firstGroup.forEach(item => item.classList.toggle('noActiveBenefit'));
+            }, 500)
+        })
     })
 }

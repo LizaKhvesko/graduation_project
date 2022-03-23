@@ -9,7 +9,7 @@ export const gift = () => {
 
      window.addEventListener('scroll', function() {
       if (pageYOffset >= 1500 && pageYOffset < 2000 && !gift.classList.contains('no-more-open') && infoForLocal.length === 0) {
-              gift.classList.add('open')
+              gift.classList.add('open');
       } else { gift.classList.remove('open')}
     });
 

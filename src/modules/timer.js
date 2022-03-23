@@ -46,7 +46,7 @@ export const timer = (date) => {
         if(getTime.timeRemaining > 0) {
             intervalId = setInterval(updateClock, 1000);
         } else {
-            clearInterval(intervalId)
+            clearInterval(intervalId);
         }
     }
     interval();

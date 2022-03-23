@@ -1,7 +1,7 @@
 export const createSertificate = (data) => {
     const container = document.querySelector('#documents .container');
-    const info = data.sertificates
-    let block = document.createElement('div');
+    const info = data.sertificates;
+    const block = document.createElement('div');
     block.classList.add('text-center');
     block.innerHTML = '';
     info.forEach(item => {
@@ -16,7 +16,7 @@ export const createSertificate = (data) => {
     })
     container.append(block);
 
-     const overlay = document.querySelector('.overlay');
+    const overlay = document.querySelector('.overlay');
     const sertificatesGlo = document.querySelectorAll('.sertificate-document');
     const documentOverlay = document.querySelectorAll('.document-overlay');
     const bigPhoto = document.querySelector('.big-photo');
@@ -45,9 +45,9 @@ export const createSertificate = (data) => {
 
             const closePhotoBtn = document.querySelector('.close-photo')
             closePhotoBtn.addEventListener('click', () => {
-            bigPhoto.style.display = 'none';
-            overlay.style.display = 'none'
-         })
-         })
+                bigPhoto.style.display = 'none';
+                overlay.style.display = 'none'
+            })
+        })
     })
 }

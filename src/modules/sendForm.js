@@ -2,7 +2,7 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
     let forms;
     const overlay = document.querySelector('.overlay');
     if (classForm !== '') {
-        forms = document.querySelectorAll(classForm)
+        forms = document.querySelectorAll(classForm);
     } else {
         forms = document.getElementsByName(nameForm);
     }
@@ -16,7 +16,7 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
         }, 2000)
         setTimeout(() => {
             text.textContent = 'Мы гарантируем 100% онфиденциальность. Ваша информация не будет распространяться.'
-        }, 3000)
+        }, 2500)
     }
     
     forms.forEach(form => {
@@ -33,8 +33,7 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
         }
 
         const submitForm = () => {
-            if (inputs.every(input => input.style.border !== '3px solid red')) {
-                
+            if (inputs.every(input => input.style.border !== '3px solid red')) {      
                 const formData = new FormData(form);
                 const formBody = {};
 
@@ -42,31 +41,26 @@ export const sendForm = ({classForm = '', nameForm = '', addInfo = []}) => {
                     if (key === 'phone') {
                         val = val.split('').map(el => +el).filter(el => el).join('');
                         formBody[key] = val; 
-                    } else if (key === 'subject') {
-                        console.log(key, val)
                     } else if (val !== '') {
                         formBody[key] = val; 
                     }
                 })
+
                 if(nameForm) {
                    delete formBody.page
                 }
-                if (nameForm === 'callback-form') {
-                   formBody['reason'] = 'call';;
-                } else if (classForm === '.form-horizontal') {
-                    formBody['reason'] = 'discount';
-                } else if (nameForm === 'application-form') {
-                    formBody['reason'] = 'need a master';
-                }
-
+                nameForm === 'callback-form' ? formBody['reason'] = 'call' : '';
+                classForm === '.form-horizontal' ? formBody['reason'] = 'discount' : '';
+                nameForm === 'application-form' ? formBody['reason'] = 'need a master' : '';
+                
                 addInfo.forEach(elem => {
-                const element = document.getElementById(elem.id);
-                if (element) {
-                    if (element.value.length >= 1){
-                        formBody[elem.id] = element.value;  
+                    const element = document.getElementById(elem.id);
+                    if (element) {
+                        if (element.value.length >= 1){
+                            formBody[elem.id] = element.value;  
+                        }
                     }
-                }
-            })
+                })
             
                 sendData(formBody)
                     .then(() => {

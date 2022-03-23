@@ -1,12 +1,13 @@
 export const burger = () => {
     const burgerBtn = document.getElementById('navigation');
     const mobileMenu = burgerBtn.querySelector('.navbar-collapse.collapse');
+    const navbarHeader = burgerBtn.querySelector('.navbar-header');
     let width = document.documentElement.clientWidth;
 
     if (width > 767 && width <= 992) {
-       burgerBtn.querySelector('.navbar-header').style.display = 'none';
+       navbarHeader.style.display = 'none';
     } else {
-        burgerBtn.querySelector('.navbar-header').style.display = 'block';
+       navbarHeader.style.display = 'block';
     }
    
     burgerBtn.addEventListener('click', (e) => {
