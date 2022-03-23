@@ -1,3 +1,4 @@
+
 export const autoSlider = () => {
     const sliderBlock = document.querySelector('.offer-backgr');
     const slides = document.querySelectorAll('.offer-img');
@@ -23,7 +24,7 @@ export const autoSlider = () => {
     }
 
     const startSlide = (timer = 2500) => {
-        interval = setInterval(autoSlide, timer);
+        setInterval(autoSlide, timer);
     };
 
     startSlide()
