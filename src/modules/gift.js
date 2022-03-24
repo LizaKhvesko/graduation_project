@@ -8,7 +8,7 @@ export const gift = () => {
     infoForLocal = JSON.parse(localStorage.getItem ("infoForLocal")) || infoForLocal;
 
      window.addEventListener('scroll', function() {
-      if (pageYOffset >= 1500 && pageYOffset < 2000 && !gift.classList.contains('no-more-open') && infoForLocal.length === 0) {
+      if (pageYOffset >= 1250 && pageYOffset < 1720 && !gift.classList.contains('no-more-open') && infoForLocal.length === 0) {
               gift.classList.add('open');
       } else { gift.classList.remove('open')}
     });

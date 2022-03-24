@@ -11,6 +11,7 @@ import { getData } from './modules/getData';
 import { createSertificate } from './modules/createSertificate';
 import { gift } from './modules/gift';
 import { comments } from './modules/comments';
+import { numberAnimation } from './modules/numberAnimation';
 
 
 
@@ -53,6 +54,7 @@ getData('../comments.json')
     .then(data => {
         comments(data)
     });
+numberAnimation();
 
 
 
