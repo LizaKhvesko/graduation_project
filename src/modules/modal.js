@@ -8,6 +8,7 @@ export const modal = () => {
      const bigPhoto = document.querySelector('.big-photo');
      const wantCall = document.querySelector('.fadeInUp a');
      const giftModal  = document.querySelector('.gift-modal');
+     const menu = document.querySelector('.mobile-menu-wrapper');
      
      function changeDisplay(prop, modal) {
        modal.style.display = prop;
@@ -30,6 +31,7 @@ export const modal = () => {
                changeDisplay('none', serviceModal);
                changeDisplay('none', bigPhoto);
                changeDisplay('none', giftModal);
+               menu.style.transform = 'translateX(100%)';
          } else if (e.target.classList.contains('header-modal__close')) {
               changeDisplay('none', headerModal);
          } else if (e.target.classList.contains('services-modal__close')) {
