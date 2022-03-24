@@ -44,34 +44,19 @@ export const comments = (data) => {
     })
 
     let commentsAll = Array.from(document.querySelectorAll('.comment-item'));
-/*
-     function render(){
-        let block = document.querySelector('#reviews .comments-container');
-        block.innerHTML = '';
-        console.log(commentsAll)
-        commentsAll.forEach(item => {
-            block.innerHTML += item
-        });
-        
-        changeComment()
-    }*/
-
-    function changeComment() {
-        commentsAll.forEach((comment, index) => {
-            if(index > 2) {
-                comment.classList.add('noActive-comment');
-            } else {
+    commentsAll.forEach((comment, index) => {
+        if(index > 2) {
+             comment.classList.add('noActive-comment');
+        } else {
                 comment.classList.remove('noActive-comment');
             }
         })
-            let elem = commentsAll.shift()
-            commentsAll.push(elem)
-    }
-     changeComment();
-    /* setInterval(() => {
-         render()
-     }, 3000)
-*/
+
+    setInterval(() => {
+        commentsAll.forEach(comment => {
+            comment.classList.toggle('noActive-comment');
+        })
+    }, 20000);
 }
 
 	
