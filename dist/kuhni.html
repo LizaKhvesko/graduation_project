@@ -22,6 +22,7 @@
     <link href="fonts/font.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <title>Шкафы-купе и кухни</title>
     <meta
       name="keywords"
@@ -118,9 +119,9 @@
               <div class="col-sm-12 col-lg-6">
                 <div class="button">
                   <a
-                    href="#callback"
+                    href=""
                     class="btn btn-warning btn-block fancyboxModal"
-                    ><i class="phone-icon"></i> Заказать звонок!</a
+                    onclick="return false"><i class="phone-icon"></i> Заказать звонок!</a
                   >
                 </div>
               </div>
@@ -177,6 +178,16 @@
       </div>
     </nav>
     <div id="offer">
+      <div class="swiper">
+				
+				 <div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="images/offer-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer2-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer3-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer4-bg.jpg" alt="portfolio" class="offer-img"></div>
+					<div class="swiper-slide"><img src="images/offer5-bg.jpg" alt="portfolio" class="offer-img"></div>
+				</div>
+			</div>	
       <div class="container">
         <div class="offer-inner">
           <div class="offer-heading">
@@ -272,7 +283,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 col-lg-6">
-            <div class="service-block">
+            <div class="service-block service-block-noActive">
               <div class="service-image">
                 <img src="images/services/9.jpg" alt="" />
                 <a
@@ -348,14 +359,14 @@
                     href="#application"
                     data-subject="Стандартные кухни"
                     class="btn btn-success btn-sm fancyboxModal"
-                    >Вызвать замерщика</a
+                    onclick="return false">Вызвать замерщика</a
                   >
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-12 col-lg-6">
-            <div class="service-block">
+            <div class="service-block service-block-noActive">
               <div class="service-image">
                 <img src="images/services/10.jpg" alt="" />
                 <a
@@ -473,14 +484,14 @@
                     href="#application"
                     data-subject="Стандартные шкафы-купе"
                     class="btn btn-success btn-sm fancyboxModal"
-                    >Вызвать замерщика</a
+                    onclick="return false">Вызвать замерщика</a
                   >
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-12 col-lg-6">
-            <div class="service-block">
+            <div class="service-block service-block-noActive">
               <div class="service-image">
                 <img src="images/services/11.jpg" alt="" />
                 <a
@@ -532,14 +543,14 @@
                     href="#application"
                     data-subject="Элитные кухни"
                     class="btn btn-success btn-sm fancyboxModal"
-                    >Вызвать замерщика</a
+                    onclick="return false">Вызвать замерщика</a
                   >
                 </div>
               </div>
             </div>
           </div>
           <div class="col-md-12 col-lg-6">
-            <div class="service-block">
+            <div class="service-block service-block-noActive">
               <div class="service-image">
                 <img src="images/services/12.jpg" alt="" />
                 <a
@@ -579,7 +590,7 @@
                     href="#application"
                     data-subject="Элитные шкафы-купе"
                     class="btn btn-success btn-sm fancyboxModal"
-                    >Вызвать замерщика</a
+                    onclick="return false">Вызвать замерщика</a
                   >
                 </div>
               </div>
@@ -594,6 +605,13 @@
             </div>
           </div>
         </div>
+        <div class="gift">
+				<img src="images/gift.png" alt="gift" class="gift-img">
+			</div>
+			<div class="gift-modal">
+				<img class="close-photo-gift" src="images/close-1.png">
+				<span>Поздравляю, вы получаете скидку 30% на любую услугу! Код "LUCKY"</span>
+			</div>
       </div>
     </div>
 
@@ -794,7 +812,7 @@
                 </div>
                 <p data-wow-delay="0.2s" class="wow fadeInUp">
                   <span>1.</span> Звоните или
-                  <a href="#order" class="fancyboxModal">оставляете заявку</a>
+                  <a href="#order" class="fancyboxModal" onclick="return false">оставляете заявку</a>
                   на сайте
                 </p>
               </div>
@@ -852,31 +870,14 @@
       </div>
     </div>
     <div id="documents" class="section">
+      <div class="big-photo">
+			</div>
     	<div class="container">
     		<div class="section-title">
     			<div class="heading-image"><i class="document-ico"></i></div>
     			<h2 class="heading"><span>Сертификаты</span> и <span>документы</span></h2>
     		</div>
-    		<div class="text-center">
-	    		<div class="col-sm-4">
-	    			<a href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
-	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
-	    				<div class="document-overlay"></div>
-	    			</a>
-	    		</div>
-	    		<div class="col-sm-4">
-	    			<a href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
-	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
-	    				<div class="document-overlay"></div>
-	    			</a>
-	    		</div>
-	    		<div class="col-sm-4">
-	    			<a href="images/documents/original/document4.jpg" class="sertificate-document" data-fancybox-group="gallery-documents">
-	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
-	    				<div class="document-overlay"></div>
-	    			</a>
-	    		</div>
-    		</div>
+
     	</div>
     </div>
     <div id="order_2" class="order">
@@ -1022,7 +1023,7 @@
                 // Необходимо указать данный тип макета.
                 iconLayout: "default#image",
                 // Своё изображение иконки метки.
-                iconImageHref: "images/marker.png",
+                //iconImageHref: "images/marker.png",
                 // Размеры метки.
                 iconImageSize: [30, 42],
                 // Смещение левого верхнего угла иконки относительно
@@ -1217,7 +1218,7 @@
         <a href="#" class="btn btn-success fancyClose">ok</a>
       </div>
     </div>
-
+  <div class="modals">
 		<div class="overlay"></div>
 
 	<div class="header-modal header-modal--opened">
@@ -1274,11 +1275,11 @@
 		</div></div></div>
 		<span title="Close" class="services-modal__close">x</span></div>
 	</div>
-
+</div>
 	<div class="smooth-scroll">
 		<img class="smooth-scroll__img" src="./images/prev_arrow.png" alt="smooth">
 	</div>
-
-
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
