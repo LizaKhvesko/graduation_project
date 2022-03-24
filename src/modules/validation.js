@@ -5,7 +5,7 @@ export const validation = () => {
 
     names.forEach(name => {
         name.addEventListener('input', (e) => {
-            let reg = /[^a-zа-я]/gi;
+            let reg = /[^a-zа-я\s]/gi;
             e.target.value = e.target.value.replace(reg, '');
         })
     })
@@ -19,7 +19,6 @@ export const validation = () => {
             } else {
                 tel.style.border = '';
             }
-            e.target.value =e.target.value[0] + e.target.value.slice(1).replace('+', '');
         })
     })
 

@@ -15,12 +15,15 @@ export const modal = () => {
        overlay.style.display = prop;
     }
 
-    buttonCall.addEventListener('click', () => {
+    buttonCall.addEventListener('click', (e) => {
+          e.preventDefault();
         changeDisplay('block', headerModal) 
+        
     })
 
     services.addEventListener('click', (e) => {
          if (e.target.closest('.service-button')) {
+              e.preventDefault();
                changeDisplay('block', serviceModal) 
          }
     })

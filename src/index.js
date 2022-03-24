@@ -41,6 +41,11 @@ slider();
 burger();
 sliderProfit();
 gift();
+getData('../comments.json')
+    .then(data => {
+        comments(data)
+    });
+numberAnimation();
 
 
 const swiper = new Swiper('.swiper', {
@@ -50,11 +55,7 @@ const swiper = new Swiper('.swiper', {
   }
 });
 
-getData('../comments.json')
-    .then(data => {
-        comments(data)
-    });
-numberAnimation();
+
 
 
 
